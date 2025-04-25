@@ -21,10 +21,10 @@ int main()
 	Sleep(5000); // Replace with API usage.
 
 	// Close Driver app and close api
-	LpError e{};
-	if (CApplicationAPI::IsApplicationRunning(e))
+	SError e{};
+	if (CApplicationAPI::IsApplicationRunning(&e))
 	{
-	   CApplicationAPI::EndApplication(e);
+	   CApplicationAPI::EndApplication(&e);
 	}
 
     CApplicationAPI::CloseApi();
